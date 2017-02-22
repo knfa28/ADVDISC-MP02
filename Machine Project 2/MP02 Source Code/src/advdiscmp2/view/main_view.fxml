@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="314.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advdiscmp2.MainViewController">
+   <children>
+      <SplitPane dividerPositions="0.42214532871972316" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="291.0" prefWidth="600.0">
+         <items>
+            <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+            <AnchorPane prefHeight="167.0" prefWidth="598.0">
+               <children>
+                  <Button layoutX="86.0" layoutY="52.0" mnemonicParsing="false" onAction="#generateText" prefHeight="27.0" prefWidth="396.0" text="Generate Random Text" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="52.0" />
+                <Button layoutX="100.0" layoutY="112.0" mnemonicParsing="false" onAction="#openFile" prefHeight="27.0" prefWidth="147.0" text="Open File" AnchorPane.leftAnchor="100.0" />
+                  <TextField fx:id="fileOpenedTextField" layoutX="253.0" layoutY="112.0" prefHeight="27.0" prefWidth="245.0" promptText="Please select a training text..." AnchorPane.rightAnchor="100.0" />
+                  <Spinner fx:id="numWordsSpinner" initialValue="2" layoutX="422.0" layoutY="17.0" min="0" prefHeight="27.0" prefWidth="76.0" AnchorPane.rightAnchor="100.0" />
+                  <Label layoutX="100.0" layoutY="22.0" text="State Length:" AnchorPane.leftAnchor="100.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="312.0" layoutY="22.0" text="Minimum Number of Words:" AnchorPane.rightAnchor="183.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stateLengthLabel" layoutX="201.0" layoutY="22.0" text="0" />
+                  <Button layoutX="100.0" layoutY="82.0" mnemonicParsing="false" onAction="#showVisualization" prefHeight="27.0" prefWidth="398.0" text="Show Visualization" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="600.0" spacing="5.0">
+         <children>
+            <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="statusLabel" maxWidth="-1.0" text="Right status">
+               <font>
+                  <Font size="11.0" fx:id="x3" />
+               </font>
+               <textFill>
+                  <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+               </textFill>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
